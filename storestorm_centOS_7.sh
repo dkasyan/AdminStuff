@@ -31,7 +31,7 @@ sudo shred -vf -n1 /dev/sda >dela.txt
 sudo shred -vf -n1 /dev/sdb >delb.txt
 sudo shred -vf -n1 /dev/sdc >delc.txt
 sudo shred -vf -n1 /dev/sdd >deld.txt
-echo"Skrypt został wykonany poprawnie"
+echo "Skrypt został wykonany poprawnie"
 
 
 
