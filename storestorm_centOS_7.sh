@@ -7,9 +7,9 @@ yum check-update -y
 yum update -y
 yum upgrade -y
 yum vim -y
-yum  mc -y
-yum net-tools -y
-yum smartmontools -y
+yum  install mc -y
+yum install net-tools -y
+yum install smartmontools -y
 lsblk 
 lsblk > str.txt
 sudo smartctl -t short /dev/sda > iaa.txt
