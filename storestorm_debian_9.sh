@@ -11,6 +11,6 @@ apt-get install mc -y
 apt-get install net-tools -y
 apt-get install smartmontools -y 
 #Instalacja FTP
-apt-get install proftpd nanp -y
+apt-get install proftpd-basic -y
 service proftpd restart
 echo "Skończyłem"
