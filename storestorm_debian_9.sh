@@ -4,12 +4,12 @@
 echo "Bede instalował"
 echo "Czy tego chcesz czy nie"
 
-sudo apt-get update -y
-sudo apt-get upgrade -y
-sudo apt-get install vim -y
-sudo apt-get install mc -y
-sudo apt-get install net-tools -y
-sudo apt-get install smartmontools -y 
+apt-get update -y
+apt-get upgrade -y
+apt-get install vim -y
+apt-get install mc -y
+apt-get install net-tools -y
+apt-get install smartmontools -y 
 #Instalacja FTP
 apt-get install proftpd nanp -y
 service proftpd restart
