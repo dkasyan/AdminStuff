@@ -1,0 +1,150 @@
+#1. Instalacja paczek 
+
+apt-get update -y
+apt-get upgrade -y
+shutdown -r now
+apt-get install apache2 -y
+apt install wget bash-completion unzip
+#usunięcie przykładowej strony
+hostnamectl set-hostname icinga
+hostnamectl
+cat /etc/hostname
+init 6 #Wstaw do pliku startu automatycznie i wykonuj po starcie systemu
+apt install apache2 libapache2-mod-php7.0 php7.0-xml php7.0-opcache php7.0-xml php7.0-mbstring php7.0-json php7.0-curl php7.0-ldap php7.0-cli php7.0-gd php7.0-intl php7.0-readline -y
+#Instalacja firewalla Potwierdzić tak 
+apt-get install -y iptables-persistent
+#Dodanie wyjątku 
+iptables -I INPUT -p tcp --destination-port 80 -j ACCEPT 
+iptables-save
+service netfilter-persistent reload
+a2enmod rewrite
+systemctl restart apache2
+a2enmod rewrite
+a2enmod ssl rewrite
+systemctl restart apache2
+a2ensite default-ssl.conf
+#Podniemniamy usługi
+vim /etc/apache2/sites-enabled/default-ssl.conf
+#Podmieniamy Pod Documents Rot
+#<Directory /var/www/html>
+#  Options +FollowSymlinks
+#  AllowOverride All
+#  Require all granted
+#</Directory>
+#Zamiast orginału wstawiamy <VirtualHost *:443>
+vim  /etc/apache2/sites-enabled/000-default.conf
+#Pod DocumentRot znowu 
+#<Directory /var/www/html>
+#  Options +FollowSymlinks
+#  AllowOverride All
+#  Require all granted
+#</Directory>
+systemctl restart apache2
+iptables -I INPUT -p tcp --destination-port 443 -j ACCEPT
+iptables-save
+service netfilter-persistent reload
+cp /etc/php/7.0/apache2/php.ini{,.backup}
+vim /etc/php/7.0/apache2/php.ini
+#Odblokowanie php time zone
+# http://php.net/date.timezone 
+# date.timezone = Europe/Warsaw
+systemctl restart apache2
+apt install mariadb-server mariadb-client php7.0-mysql -y
+netstat –tlpn | grep mysql
+mysql -h localhost
+#Urzywanie danych w bazie
+use mysql;
+update user set plugin='' where user='root';
+flush privileges;
+exit
+# Instalacja Wszystkich pakietów bezpiecznych poniżej to co sisie wyświetli z odpowiedziami 
+NOTE: RUNNING ALL PARTS OF THIS SCRIPT IS RECOMMENDED FOR ALL MariaDB
+
+ SERVERS IN PRODUCTION USE!  PLEASE READ EACH STEP CAREFULLY!
+
+In order to log into MariaDB to secure it, we'll need the current
+
+password for the root user.  If you've just installed MariaDB, and
+
+you haven't set the root password yet, the password will be blank,
+
+so you should just press enter here.
+
+Enter current password for root (enter for none):
+
+OK, successfully used password, moving on...
+
+Setting the root password ensures that nobody can log into the MariaDB
+
+root user without the proper authorisation.
+
+You already have a root password set, so you can safely answer 'n'.
+
+Change the root password? [Y/n] y
+
+New password:
+
+Re-enter new password:
+
+Password updated successfully!
+
+Reloading privilege tables..
+
+ ... Success!
+
+By default, a MariaDB installation has an anonymous user, allowing anyone
+
+to log into MariaDB without having to have a user account created for
+
+them.  This is intended only for testing, and to make the installation
+
+go a bit smoother.  You should remove them before moving into a
+
+production environment.
+
+Remove anonymous users? [Y/n] y
+
+ ... Success!
+
+Normally, root should only be allowed to connect from 'localhost'.  This
+
+ensures that someone cannot guess at the root password from the network.
+
+Disallow root login remotely? [Y/n] y
+
+ ... Success!
+
+By default, MariaDB comes with a database named 'test' that anyone can
+
+access.  This is also intended only for testing, and should be removed
+
+before moving into a production environment.
+
+Remove test database and access to it? [Y/n] y
+
+ - Dropping test database...
+
+ ... Success!
+
+ - Removing privileges on test database...
+
+ ... Success!
+
+Reloading the privilege tables will ensure that all changes made so far
+
+will take effect immediately.
+
+Reload privilege tables now? [Y/n] y
+
+ ... Success!
+
+Cleaning up...
+
+All done!  If you've completed all of the above steps, your MariaDB
+
+installation should now be secure.
+
+Thanks for using MariaDB!
+
+#tyle wchodzimy w maria db
+mysql -h localhost -u root
