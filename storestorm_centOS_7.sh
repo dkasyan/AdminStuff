@@ -35,10 +35,11 @@ sudo smartctl -a /dev/sdc > testc.txt
 sudo smartctl -a /dev/sdd > testd.txt
 #Kasowanie danych na dyskach
 echo "Teraz trochę poczyszczę chwilę to zajmie" >> logsto.txt
-sudo shred -vf -n1 /dev/sda >> logsto.txt
-sudo shred -vf -n1 /dev/sdb >> logsto.txt
-sudo shred -vf -n1 /dev/sdc >> logsto.txt
-sudo shred -vf -n1 /dev/sdd >> logsto.txt
+sudo shred -vf -n1 /dev/sda 
+sudo shred -vf -n1 /dev/sdb 
+sudo shred -vf -n1 /dev/sdc 
+sudo shred -vf -n1 /dev/sdd 
+echo "Skasowałem wszystkie dane" >> logsto.txt
 echo "Skrypt został wykonany poprawnie, dozobaczenia następnym razem" >> logsto.txt
 
 
