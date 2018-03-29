@@ -12,20 +12,29 @@ sudo yum -y install net-tools
 sudo yum -y install smartmontools 
 sudo yum -y install lftp 
 echo "Zainstalowałem wszystko co potrzebne" > logsto.txt
+sudo chmod +777 logsto.txt
 lsblk 
 echo "Sprawdzam jakie dyski mam do sprawdzenia :)" >> logsto.txt
 lsblk >> logsto.txt
-sudo smartctl -t short /dev/sda >> logsto.txt
-sudo smartctl -t short /dev/sdb >> logsto.txt
-sudo smartctl -t shrot /dev/sdc >> logsto.txt
-sudo smartctl -t short /dev/sdd >> logsto.txt
+sudo smartctl -t short /dev/sda  
+echo "Sprawdzilem pokrotce /dev/sda" >> logsto.txt
+sudo smartctl -t short /dev/sdb 
+echo "Sprawdzilem pokrotce /dev/sdb" >> logsto.txt
+sudo smartctl -t shrot /dev/sdc 
+echo "Sprawdzilem pokrotce dev/sdc" >> logsto.txt
+sudo smartctl -t short /dev/sdd
+echo "Sprawdzilem pokrotce  dev/sdd" >> logsto.txt
 echo "Daj mi odpocząć 20 min" >> logsto.txt
 sleep 20m
 echo "Zaczynam sprawdzać dyski dokładniej" >> logsto.txt
-sudo smartctl -t long /dev/sda >> logsto.txt
-sudo smartctl -t long /dev/sdb >> logsto.txt
-sudo smartctl -t long /dev/sdc >> logsto.txt
-sudo smartctl -t long /dev/sdd >> logsto.txt
+sudo smartctl -t long /dev/sda 
+echo "Sprawdzilem dokladnie  dev/sda" >> logsto.txt
+sudo smartctl -t long /dev/sdb 
+echo "Sprawdzilem dokladnie  dev/sdb" >> logsto.txt
+sudo smartctl -t long /dev/sdc 
+echo "Sprawdzilem dokladnie  dev/sdc" >> logsto.txt
+sudo smartctl -t long /dev/sdd 
+echo "Sprawdzilem dokladnie  dev/sdd" >> logsto.txt
 echo "Ale się zmęczyłem, daj mi 450 min" >> logsto.txt
 sleep 450m 
 echo "Wypiszę ci co znalazłem do osobnych plików" >> logsto.txt
