@@ -13,7 +13,7 @@ class Backup:
     def __lt__(self, other):
         return self.creation_date < other.creation_date
 
-
+#
 rootdir = "."
 prefix = "kvm"
 
