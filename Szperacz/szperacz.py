@@ -15,9 +15,9 @@ with open('testaa.txt','r') as f:                                 #Otwiera tekst
             p = line.find('Reallocated_Sector_Ct')
 
             if p > 0:
-                slowa = str(p)
+                slowa = str(line)
                 slowa = line.split(" ")
-                ile = p.count("")
+                ile = line.count("")
                 ilei = int(ile)
                 slowai = int(slowa[35])
                 print("")
