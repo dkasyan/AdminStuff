@@ -55,17 +55,17 @@ with open('testaa.txt','r') as f:                                 #Otwiera tekst
 #                else:
 #                    powoh = True
 ########################## Podsumowanie ################################################
-koniec = False
-if powoh == True:
-    if relsec == True:
-        koniec = True
-    else:
-        koniec = False
-else:
-    koniec = False
-if koniec == True:
-    os.system('sudo ')
-    print("Wszystko ok")
+#koniec = False
+#if powoh == True:
+#    if relsec == True:
+#        koniec = True
+#    else:
+#        koniec = False
+#else:
+#    koniec = False
+#if koniec == True:
+#    os.system('sudo ')
+#    print("Wszystko ok")
 
         #        print(slowa)
 #        print(slowa[35])
