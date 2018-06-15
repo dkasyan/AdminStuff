@@ -34,7 +34,7 @@ with open('testaa.txt','r') as f:                                 #Otwiera tekst
                 del ile
                 del ilei
                 print("jolo")
-            else
+            else:
                 print("Andrzej nieee")
 
 
