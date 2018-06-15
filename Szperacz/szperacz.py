@@ -22,9 +22,13 @@ with open('testaa.txt','r') as f:                                 #Otwiera tekst
                 slowai = int(slowa[35])
                 print("")
                 if slowai > 0:
+                    print("Znacznik false")
                     relsec = False
+
                 else:
+                    print("Znacznik true")
                     relsec = True
+
 
         for line in f:
             k = line.find('Power_On_Hours')
