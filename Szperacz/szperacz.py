@@ -15,9 +15,9 @@ with open('testaa.txt','r') as f:                                 #Otwiera tekst
             p = line.find('Reallocated_Sector_Ct')
 
             if p > 0:
-                slowa = str(line)
+                slowa = str(p)
                 slowa = line.split(" ")
-                ile = slowa.count("")
+                ile = p.count("")
                 ilei = int(ile)
                 slowai = int(slowa[35])
                 print("")
@@ -27,9 +27,16 @@ with open('testaa.txt','r') as f:                                 #Otwiera tekst
                     relsec = True
 
         for line in f:
-            p = line.find('Power_On_Hours')
+            k = line.find('Power_On_Hours')
             if p > 0:
-                print(p)
+                del slowa
+                del slowai
+                del ile
+                del ilei
+                print("jolo")
+            else
+                print("Andrzej nieee")
+
 
 ############################# Sprawdzanie godzin ###############################
 #with open('testda.txt','r') as f:                                 #Otwiera tekstgit
