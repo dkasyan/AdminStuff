@@ -28,11 +28,7 @@ with open('testaa.txt','r') as f:                                 #Otwiera tekst
                 else:
                     print("Znacznik true")
                     relsec = True
-                    print("dalej po znaczniku")
 
-                    
-
-        for line in f:
             k = line.find('Power_On_Hours')
             if p > 0:
                 del slowa
@@ -42,6 +38,15 @@ with open('testaa.txt','r') as f:                                 #Otwiera tekst
                 print("jolo")
             else:
                 print("Andrzej nieee")
+
+
+
+
+
+
+                    
+
+        
 
 
 ############################# Sprawdzanie godzin ###############################
