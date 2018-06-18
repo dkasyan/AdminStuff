@@ -30,11 +30,28 @@ with open('testaa.txt','r') as f:                                 #Otwiera tekst
                     relsec = True
 
             k = line.find('Power_On_Hours')
-            if p > 0:
-                del slowa
-                del slowai
-                del ile
-                del ilei
+            del slowa
+            del slowai
+            del ile
+            del ilei
+            if k > 0:
+                slowa = str(line)
+                slowa = line.split(" ")
+                ile = line.count("")
+                ilei = int(ile)
+                slowai = int(slowa[35])
+                print("")
+                if slowai > 0:
+                    print("Znacznik false")
+                    timemax = False
+
+                else:
+                    print("Znacznik true")
+                    timemax = True
+
+                
+                
+                
                 print("jolo")
             else:
                 print("Andrzej nieee")
