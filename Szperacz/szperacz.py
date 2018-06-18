@@ -30,7 +30,7 @@ with open('testaa.txt','r') as f:                                 #Otwiera tekst
                     relsec = True
 
             k = line.find('Power_On_Hours')
-            del slowa
+            
             del slowai
             del ile
             del ilei
