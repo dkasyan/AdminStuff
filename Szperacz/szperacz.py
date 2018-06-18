@@ -40,7 +40,7 @@ with open('testaa.txt','r') as f:                                 #Otwiera tekst
                 slowa = line.split(" ")
                 ile = line.count("")
                 ilei = int(ile)
-                slowai = int(slowa[35])
+                slowai = int(slowa[10])
                 print("")
                 if slowai > 0:
                     print("Znacznik false")
