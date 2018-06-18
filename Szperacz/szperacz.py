@@ -27,7 +27,8 @@ with open('testaa.txt','r') as f:                                 #Otwiera tekst
 
                 else:
                     print("Znacznik true")
-                    relsec == True
+                    relsec = True
+                    print("dalej po znaczniku")
 
                     
 
