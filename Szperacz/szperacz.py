@@ -40,6 +40,7 @@ with open('testaa.txt','r') as f:                                 #Otwiera tekst
                 slowa = line.split(" ")
                 ile = line.count("")
                 ilei = int(ile)
+                print("doszlo")
                 slowai = int(slowa[10])
                 print("")
                 if slowai > 0:
