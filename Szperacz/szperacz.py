@@ -27,8 +27,9 @@ with open('testaa.txt','r') as f:                                 #Otwiera tekst
 
                 else:
                     print("Znacznik true")
-                    relsec = True
+                    relsec == True
 
+                    
 
         for line in f:
             k = line.find('Power_On_Hours')
