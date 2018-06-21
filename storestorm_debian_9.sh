@@ -65,11 +65,11 @@ smartctl -a /dev/sdd > testdd.txt
 echo "Skrypt został wykonany poprawnie, dozobaczenia następnym razem" >> logsto.txt
 echo "Jeszcze tylko wyślę pliki i kończę"
 
-scp /root/testaa.txt $ID_USER@$IP_SERWERA:/root/
-scp /root/testbb.txt $ID_USER@$IP_SERWERA:/root/
-scp /root/testcc.txt $ID_USER@$IP_SERWERA:/root/
-scp /root/testdd.txt $ID_USER@$IP_SERWERA:/root/
-scp /root/logsto.txt $ID_USER@$IP_SERWERA:/root/
+scp /root/AdminStuff-master/testaa.txt $ID_USER@$IP_SERWERA:/root/
+scp /root/AdminStuff-master/testbb.txt $ID_USER@$IP_SERWERA:/root/
+scp /root/AdminStuff-master/testcc.txt $ID_USER@$IP_SERWERA:/root/
+scp /root/AdminStuff-master/testdd.txt $ID_USER@$IP_SERWERA:/root/
+scp /root/AdminStuff-master/logsto.txt $ID_USER@$IP_SERWERA:/root/
 
 #lftp -u dftp,zaq1@WSX 192.168.150.96 -e "put logsto.txt ; exit "
 #lftp -u dftp,zaq1@WSX 192.168.150.96 -e "put testaa.txt ; exit "
