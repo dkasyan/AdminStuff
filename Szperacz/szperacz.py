@@ -10,12 +10,14 @@ print('Podaj hasło administratora##############################################
 #os.system('sudo smartctl -a /dev/sda > testda.txt ')
 
 
-with open('testaa.txt','r') as f:                                 #Otwiera tekstgit
+#with open('testaa.txt','r') as f:                                 #Otwiera tekstgit
         for line in f:
-            p = line.find('Reallocated_Sector_Ct')
-            k = line.find('Power_On_Hours')
+            k = line.find('Reallocated_Sector_Ct')
+            p = line.find('Power_On_Hours')
 
-            if p > 0:
+        logic == True;
+
+            if k > 0:
                 slowa = str(line)
                 slowa = line.split(" ")
                 ile = line.count("")
@@ -24,7 +26,7 @@ with open('testaa.txt','r') as f:                                 #Otwiera tekst
                 print("")
                 if slowai > 0:
                     print("Znacznik false")
-                    relsec = False
+                
 
                 else:
                     print("Znacznik true")
@@ -34,7 +36,7 @@ with open('testaa.txt','r') as f:                                 #Otwiera tekst
                 del ile
                 del ilei
             
-            if k > 0:
+            if p > 0:
                 slowa = str(line)
                 slowa = line.split(" ")
                 ile = line.count("")
