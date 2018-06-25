@@ -4,7 +4,7 @@ import os
 poh = 50000
 
 print('Sprawdzam dyski pod kątem błędów i liczby {} godzin'.format(poh))
-print('Podaj hasło administratora')
+print('Podaj hasło administratora##################################################################################')
 #print("Sprawdzam dyski pod kontem {poh} godzin")
 
 #os.system('sudo smartctl -a /dev/sda > testda.txt ')
@@ -13,6 +13,7 @@ print('Podaj hasło administratora')
 with open('testaa.txt','r') as f:                                 #Otwiera tekstgit
         for line in f:
             p = line.find('Reallocated_Sector_Ct')
+            k = line.find('Power_On_Hours')
 
             if p > 0:
                 slowa = str(line)
@@ -32,8 +33,6 @@ with open('testaa.txt','r') as f:                                 #Otwiera tekst
                 del slowai
                 del ile
                 del ilei
-
-            k = line.find('Power_On_Hours')
             
             if k > 0:
                 slowa = str(line)
@@ -56,7 +55,7 @@ with open('testaa.txt','r') as f:                                 #Otwiera tekst
                 
                 print("jolo")
             else:
-                print("Andrzej nieee")
+                
 
 
 
