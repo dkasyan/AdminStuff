@@ -24,9 +24,16 @@ with open('testaa.txt','r') as f:                                 #Otwiera tekst
         if k > 0:
             words = str(line)
             words = line.split(" ")
-            words = words[35]
+            #words = words[35]
             kwalue = words[35]    
-            print(words)              
+            continue 
+        if p > 0:
+            del words
+            words = str(line)
+            words = line.split(" ")
+            #words = words[35]
+            pwalue = words[35]
+            print(pwalue)               
             
 
                 
