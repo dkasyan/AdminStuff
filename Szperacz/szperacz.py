@@ -16,6 +16,7 @@ with open('testaa.txt','r') as f:                                 #Otwiera tekst
             p = line.find('Power_On_Hours')
             if k > 0:
                 words = str(line)
+                words = line.split(" ")
                 print(words)
 
 
