@@ -15,10 +15,10 @@ with open('testaa.txt','r') as f:                                 #Otwiera tekst
             k = line.find('Reallocated_Sector_Ct')
             p = line.find('Power_On_Hours')
             if k > 0:
-                print(k)
+                words = str(line)
+                print(words)
 
-        print("Wydrukuj p")
-        print(p)
+
                 
 
   
