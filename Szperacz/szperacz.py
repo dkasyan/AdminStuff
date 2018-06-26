@@ -17,11 +17,10 @@ with open('testaa.txt','r') as f:                                 #Otwiera tekst
         sn = line.find('Serial Number:') 
         if k > 0:
             words = str(line)
-            words = line.split(" ")              
-            for i in range(10, 45):
-                print(i)
-                print(words[i])
-
+            words = line.split(" ")
+            words = words[35]
+            print(words)              
+            
 
                 
 
