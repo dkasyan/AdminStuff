@@ -20,7 +20,7 @@ with open('testaa.txt','r') as f:                                 #Otwiera tekst
             words = line.split(" ")              
             
             print = (number)
-            for i in range(10, 30);
+            for i in range(10, 30):
                 print(i)
                 print(words[i])
 
