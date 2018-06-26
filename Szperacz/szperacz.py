@@ -18,7 +18,7 @@ with open('testaa.txt','r') as f:                                 #Otwiera tekst
             if k > 0:
                 words = str(line)
                 words = line.split(" ")
-                number = 29
+                number = 27
                 wordsi = words[number]
 
                 print(wordsi)
