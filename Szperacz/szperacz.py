@@ -14,55 +14,10 @@ with open('testaa.txt','r') as f:                                 #Otwiera tekst
         for line in f:
             k = line.find('Reallocated_Sector_Ct')
             p = line.find('Power_On_Hours')
+            print("pierwsze k " k)
+        
 
-        logic == True;
-
-            if k > 0:
-                slowa = str(line)
-                slowa = line.split(" ")
-                ile = line.count("")
-                ilei = int(ile)
-                slowai = int(slowa[35])
-                print("")
-                if slowai > 0:
-                    print("Znacznik false")
-                
-
-                else:
-                    print("Znacznik true")
-                    relsec = True
-                del slowa
-                del slowai
-                del ile
-                del ilei
-            
-            if p > 0:
-                slowa = str(line)
-                slowa = line.split(" ")
-                ile = line.count("")
-                ilei = int(ile)
-                print("doszlo")
-                slowai = int(slowa[10])
-                print("")
-                if slowai > 0:
-                    print("Znacznik false")
-                    timemax = False
-
-                else:
-                    print("Znacznik true")
-                    timemax = True
-
-                
-                
-                
-                print("jolo")
-            else:
-                
-
-
-
-
-
+  
 
                     
 
