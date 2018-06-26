@@ -14,7 +14,9 @@ with open('testaa.txt','r') as f:                                 #Otwiera tekst
         for line in f:
             k = line.find('Reallocated_Sector_Ct')
             p = line.find('Power_On_Hours')
-            print("pierwsze k " k)
+            print(k)
+            print("Wydrukuj p")
+            print(p)
         
 
   
