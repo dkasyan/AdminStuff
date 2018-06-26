@@ -19,9 +19,9 @@ with open('testaa.txt','r') as f:                                 #Otwiera tekst
                 words = str(line)
                 words = line.split(" ")
                 number = 15
-                words = words[number,"tests"]
+                wordsi = words[number]
 
-                print(words)
+                print(wordsi)
 
 
                 
