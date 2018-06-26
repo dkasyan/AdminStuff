@@ -18,7 +18,8 @@ with open('testaa.txt','r') as f:                                 #Otwiera tekst
             if k > 0:
                 words = str(line)
                 words = line.split(" ")
-                words = words[15]
+                number = 15
+                words = words[number,"tests"]
 
                 print(words)
 
