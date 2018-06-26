@@ -18,10 +18,15 @@ with open('testaa.txt','r') as f:                                 #Otwiera tekst
             if k > 0:
                 words = str(line)
                 words = line.split(" ")
-                number = 21
-                wordsi = words[number]
+                clone = ()
+                for a in 
+                number = range(1, 40)
+                for a in number
+                    print(a)
+                    print(words[a])
+                
 
-                print(wordsi)
+                
 
 
                 
