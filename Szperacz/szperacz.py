@@ -18,8 +18,6 @@ with open('testaa.txt','r') as f:                                 #Otwiera tekst
         if k > 0:
             words = str(line)
             words = line.split(" ")              
-            
-            print = (number)
             for i in range(10, 30):
                 print(i)
                 print(words[i])
