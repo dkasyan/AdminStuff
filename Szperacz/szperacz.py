@@ -18,9 +18,9 @@ with open('testaa.txt','r') as f:                                 #Otwiera tekst
             if k > 0:
                 words = str(line)
                 words = line.split(" ")
-                words = int(words[10])
+                wordsi = int(words[10])
 
-                print(words)
+                print(wordsi)
 
 
                 
