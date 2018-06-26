@@ -10,6 +10,12 @@ print('Podaj hasło administratora##############################################
 #os.system('sudo smartctl -a /dev/sda > testda.txt ')
 
 
+#dyski hitahi Device Model:     ST3000DM001-1CH166
+
+
+
+
+
 with open('testaa.txt','r') as f:                                 #Otwiera tekstgit
     for line in f:
         k = line.find('Reallocated_Sector_Ct')
@@ -19,6 +25,7 @@ with open('testaa.txt','r') as f:                                 #Otwiera tekst
             words = str(line)
             words = line.split(" ")
             words = words[35]
+            kwalue = words[35]    
             print(words)              
             
 
