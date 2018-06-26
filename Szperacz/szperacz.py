@@ -14,6 +14,7 @@ with open('testaa.txt','r') as f:                                 #Otwiera tekst
         for line in f:
             k = line.find('Reallocated_Sector_Ct')
             p = line.find('Power_On_Hours')
+            sn = line.find('Serial Number:') 
             if k > 0:
                 words = str(line)
                 words = line.split(" ")
