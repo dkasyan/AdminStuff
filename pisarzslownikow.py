@@ -5,7 +5,7 @@ import os #Biblioteka sluzaca do
 from itertools import product
 
 ###########Podaj wszystkie stringi########################
-c = 'Dr@gonAge1234567890!@#$%^&*()'
+c = 'Dr@gonAge1@#$%^&*()1234567890a'
 lenght = len(c)
 licznik = 0
 
@@ -28,6 +28,8 @@ while licznik <= lenght:
             # f.write("This is line %d\r\n" % (i+1))
     print("Jestem przy")
     print(licznik)
+    print(na)
+    print(lenght)
     licznik += 1  # Ma to taki sam efekt jak licznik = licznik + 1
 
 
