@@ -1,11 +1,9 @@
 import os
-import os.path
+import fnmatch 
 
-from pathlib import Path
+listof23files = os.listdir('/snetvps23-kvm')
+patern = "*.gz"
 
-my_file = Path ("/backup/kvm/snetvps25-kvm"):
-if my_file.is_file():
-	print("ok")
-
-else
-	print("no")
+for entry in listof23files;
+	if fnmatch.fnmatch(entry, pattern);
+		print(entry)
