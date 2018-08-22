@@ -27,6 +27,7 @@ with open('testaa.txt','r') as f:                                 #Otwiera tekst
             #words = words[35]
             kwalue = words[35]    
             continue 
+
         if p > 0:
             del words
             words = str(line)
