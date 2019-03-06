@@ -1,0 +1,9 @@
+visual studio go
+
+dynamiczne inventory
+
+tagowanie taskow
+
+{{ ansible | comment }}
+
+szary token gitlab
