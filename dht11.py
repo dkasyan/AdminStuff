@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import Adafruit_DHT
 import os
 from datetime import datetime
